@@ -15,6 +15,7 @@
   "dependencies": {
     "cordova-android": "^8.1.0",
     "cordova-browser": "^6.0.0",
+    "cordova-ios": "^5.1.1",
     "cordova-plugin-facebook4": "6.4.0",
     "cordova-plugin-geolocation": "^4.0.2",
     "cordova-plugin-googleplus": "8.4.0",
@@ -44,7 +45,8 @@
     },
     "platforms": [
       "browser",
-      "android"
+      "android",
+      "ios"
     ]
   }
 }
