@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="
+                            default-src * data: blob: ws: wss: gap://ready file://*;
+                            style-src * 'unsafe-inline'; 
+                            media-src *;
+                            img-src * filesystem: data:;
+                            script-src * 'unsafe-inline' 'unsafe-eval';
+                            connect-src * ws: wss:;">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/gameon.css">
+<link rel="stylesheet" href="css/tagify.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <title>GameOn!</title>
+</head>
+<body class="gameon grupo">
+
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col mb-4">
+                    <div id="flecha-atras">
+                        <i class="gameon-flecha-izq"></i>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <img class="logo-gameon" src="img/logo-gameon.png" alt="Logo GameOn">
+                </div>
+                <div class="col mb-4 text-right">
+                    <a href="usuario-notificaciones.html">
+                        <div id="notificaciones">
+                            <i class="contador-numero">0</i>
+                        </div>
+                    </a>
+                    <div id="filtro-principal">
+                        <i class="gameon-filtro"></i>
+                    </div>
+                </div>                
+            </div>
+        </div>        
+    </header>
+
+    <section id="filtro" class="filtro">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="formulario-filtro">
+                        <form>
+                            <div class="form-group">
+                                <label for="categoria">Categoría</label>
+                                <select  class="form-control" type="text" name="categoria" placeholder="" id="categoria">
+                                    <option value="2" selected>Partidos</option>
+                                    <option value="1">Campos</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="deporte">Deporte</label>
+                                <select class="form-control" type="text" name="deporte" placeholder="" id="deporte">
+</select>
+                            </div>
+                            <div class="form-group text-center">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="filtro-reserva" >
+                                    <label id="label-filtro-reserva" class="custom-control-label" for="filtro-reserva">No Reservado</label>
+                                </div>
+                            </div>
+                            <div class="row filtro-mostrar-fechas">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="desde">Desde</label>
+                                        <input class="form-control" type="date" name="desde" placeholder="" id="desde">
+                                    </div>                                    
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="hasta">Hasta</label>
+                                        <input class="form-control" type="date" name="hasta" placeholder="" id="hasta">
+                                    </div>                                    
+                                </div>
+                            </div>
+                            
+                            <div class="row filtro-mostrar-lugar">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="provincia">Provincia</label>
+                                        <select  class="form-control" type="text" name="provincia" placeholder="" id="provincia">
+                                            <option value=''>TODOS</option>
+                                        </select>
+                                    </div>                                    
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="distrito">Distrito</label>
+                                        <select  class="form-control" type="text" name="distrito" placeholder="" id="distrito">
+                                            <option value=''>TODOS</option>
+                                        </select>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <button type="button" id="btnFiltrar" class="btn boton-gameon">Filtrar</button>
+                        </form>
+                    </div>
+                </div>               
+            </div>
+        </div>        
+    </section>
+
+    <section class="miembros-grupo">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 id="lblNombreGrupo">Nombre del Partido</h2>
+                    <h3>Miembros</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-6">
+                    <a href="#" id="btnInvitar" class="btn boton-gameon mx-0">Invitar</a>
+                </div>
+                <div class="col-6">
+                    <a href="#" id="btnSolicitudes" class="btn boton-gameon mx-0">Solicitudes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="tmpl-campo" class="tarjeta-usuario mb-3 d-none">
+        <div class="row">
+            <div class="col-3 text-center">
+                <div class="tarjeta-imagen-usuario" style="background-image: url([usuario_img]);"></div>
+            </div>
+            <div class="col-5 pl-0 align-self-center">
+                <h4 class="tarjeta-nombre-usuario mb-0">[nombre_usuario]</h4>
+                <div class="tarjeta-username">[nickname]</div>
+                <div class="tarjeta-deporte">[deporte]</div>
+            </div>
+            <div class="col-4 align-self-center text-right">
+                <span user_id="[user_id]" partido_miembro_id="[partido_miembro_id]" class="btnAdmin iconos administrador [es_admin]"><i class="gameon-administrador"></i></span>
+                <span user_id="[user_id]" partido_miembro_id="[partido_miembro_id]" class="btnEliminar iconos eliminar ml-3">X</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="lista-miembros-grupos">
+        <div class="container">
+            <div class="row">
+                <div class="col" id="sec-campos">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-start justify-content-between text-center">
+                <div class="col">
+                    <div class="principal">
+                        <a href="principal.html">
+                            <i class="gameon-principal"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="campos">
+                        <a href="campo.html">
+                            <i class="gameon-campos"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="grupos">
+                        <a href="grupo.html">
+                            <i class="gameon-grupos"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="perfil">
+                        <a href="usuario.html">
+                            <i class="gameon-usuario"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.bcSwipe.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.js"></script>
+    <script type="text/javascript" src="js/tagify.js"></script>
+    <script src="js/jquery.blockUI.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="js/app/constants.js"></script>
+    <script type="text/javascript" src="js/app/app.js"></script>
+    <script type="text/javascript" src="js/app/grupo-miembros.js"></script>
+    <script>
+        
+    </script>
+
+</body>
+</html>

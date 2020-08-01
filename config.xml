@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HelloCordova</name>
+<widget id="pe.insight.gameon" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>GameOn</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        GameOn
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+        GameOn
     </author>
-    <content src="index.html" />
+    <content src="login.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -19,8 +19,43 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
+
+    <platform name="android">
+        <icon background="res/icon/android/ldpi.png" density="ldpi" foreground="res/icon/android/ldpi.png" />
+        <icon background="res/icon/android/mdpi.png" density="mdpi" foreground="res/icon/android/mdpi.png" />
+        <icon background="res/icon/android/hdpi.png" density="hdpi" foreground="res/icon/android/hdpi.png" />
+        <icon background="res/icon/android/xhdpi.png" density="xhdpi" foreground="res/icon/android/xhdpi.png" />
+        <icon background="res/icon/android/xhdpi.png" density="xxhdpi" foreground="res/icon/android/xhdpi.png" />
+        <icon background="res/icon/android/xhdpi.png" density="xxxhdpi" foreground="res/icon/android/xhdpi.png" />
+        <!-- you can use any density that exists in the Android project -->
+        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
+        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
+        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
+        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
+
+        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
+        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
+        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
+        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+    </platform>
+
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+
+    <platform name="browser">
+        <preference name="SplashScreen" value="/img/logo-gameon.png" /> <!-- defaults to "/img/logo.png" -->
+        <preference name="AutoHideSplashScreen" value="true" /> <!-- defaults to "true" -->
+        <preference name="SplashScreenDelay" value="3000" /> <!-- defaults to "3000" -->
+        <preference name="SplashScreenBackgroundColor" value="black" /> <!-- defaults to "#464646" -->
+        <preference name="ShowSplashScreen" value="false" /> <!-- defaults to "true" -->
+        <preference name="SplashScreenWidth" value="274" /> <!-- defaults to "170" -->
+        <preference name="SplashScreenHeight" value="92" /> <!-- defaults to "200" -->
+    </platform>
+    <preference name="android-minSdkVersion" value=" 19" />
+    <preference name="GOOGLE_MAPS_ANDROID_API_KEY" value="AIzaSyB58JBcWqH4OcyQwZv4UQduSgeLRkDWNQg" />
+    <preference name="GOOGLE_MAPS_IOS_API_KEY" value="AIzaSyB58JBcWqH4OcyQwZv4UQduSgeLRkDWNQg" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreenSpinnerColor" value="white" />
 </widget>

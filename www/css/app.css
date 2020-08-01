@@ -1,0 +1,1955 @@
+/* Generales */
+*{
+	font-family: Montserrat;
+}
+
+*:focus,*:hover{
+	outline: none;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+h1.h1-gameon{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 29px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+input.input-gameon, select.select-gameon, textarea.textarea-gameon{
+	border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 0.5em;
+}
+
+.form-group label:first-child{
+	color: #fff;
+}
+
+.form-control:focus{
+	border-color: #FF5221;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 82, 33, 0.25)
+}
+
+label {
+    margin-bottom: .3rem;
+}
+
+.date-gameon label{
+	display: block;
+}
+
+.date-gameon input[type=date]{
+	display: block;
+	width: 100%;
+	border-radius: 10px;
+	border:none;
+	font-size: 18px;
+    line-height: 22px;
+    border-radius: 10px;
+    height: 45px;
+    padding: .375rem .75rem;
+}
+
+input:focus{
+	outline:transparent;
+}
+
+body{
+	background: #2C2B31 !important;
+	width: 100vw;
+	height: 100%;
+}
+
+body.gameon{
+	background: #2C2B31 !important;
+	width: 100vw;
+	height: 100%;
+}
+
+button[type=submit].boton-gameon, .boton-gameon{
+	border-radius: 15px 0 15px 0;
+	background: #FF5221;
+	color: #fff;
+	height: 55px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 24px;
+	text-align: center;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	display:block;
+}
+
+.custom-file-label::after{
+	content: "Subir";
+}
+
+.custom-control-label{
+	color: #fff;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #FF5221;
+    background-color: #FF5221;
+}
+
+.custom-control-input:focus:not(:checked)~.custom-control-label::before{
+	border-color: #FF5221;
+}
+
+.custom-control-input:focus~.custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(255, 82, 33, 0.25);
+}
+
+.boton-gameon{
+	border-radius: 15px 0 15px 0;
+	background: #FF5221;
+	color: #fff;
+	height: 55px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 55px;
+	text-align: center;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	display:block;
+}
+
+.overflow-hidden{
+	overflow: hidden !important;
+}
+
+/*  Precarga */
+
+.precarga{
+	background: #2C2B31;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+.logo-precarga{
+	width: 274px;
+	height: 92px;
+	background: url(../img/logo-gameon.png);
+	animation: pulso-precarga 1s infinite;
+}
+
+@keyframes pulso-precarga {
+  0%   {transform: scale(1);}
+  50%  {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+
+/* Iconos */
+.gameon-inicio{
+	position: relative;
+	width: 30px;
+	height: 30px;
+}
+
+.gameon-inicio:after{
+	content:"";
+	background-image: url("data:image/svg+xml,%3Csvg id='Capa_1' data-name='Capa 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 41.21 34.11'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;stroke:%23ea552d;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.16px;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eiconos%3C/title%3E%3Cpath class='cls-1' d='M33.86,16.89a1.87,1.87,0,0,0-.61-1.44c-1-.93-1.88-1.88-2.82-2.82L24.69,6.91c-1-1.11-2.06-2.14-3.13-3.16a1.4,1.4,0,0,0-2.06.13Q13.65,9.72,7.83,15.56a1.47,1.47,0,0,0-.48,1q0,6.36,0,12.72a1.44,1.44,0,0,0,1.36,1.41c1.51,0,3,0,4.55,0l.3,0,18.74,0a1.5,1.5,0,0,0,1.55-1.65C33.86,25,33.85,21,33.86,16.89ZM28,24.39c0,.34-.09.48-.46.48h-14l-.2,0a1.05,1.05,0,0,1-.06-.24c0-1.95,0-3.91,0-5.87a.62.62,0,0,1,.21-.49Q17,14.66,20.59,11.1h0l4.24,4.19c.94.94,1.87,1.89,2.82,2.82a.91.91,0,0,1,.3.71C27.94,20.68,27.94,22.53,28,24.39Z'/%3E%3C/svg%3E");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: -15px;
+    left: 15px;
+}
+
+/*  Login */
+
+.login{
+	background: #2C2B31 !important;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	min-height: 100vh !important;
+}
+
+.login .logo-login,.login input{
+	max-width: 70%;
+	width: 100%;
+}
+
+.login img{
+	margin-bottom: 50px;
+}
+
+.login input{
+	border-radius: 15px 0 15px 0;
+	height: 55px;
+	font-family: Montserrat, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 24px;
+	text-align: center;
+}
+
+.login input::placeholder{
+	font-family: Montserrat, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 24px;
+	text-align: center;
+}
+
+.login a{
+	color:#fff;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 15px;
+	text-align: center;
+}
+
+.login button[type=submit]{
+	border-radius: 15px 0 15px 0;
+	background: #FF5221;
+	color: #fff;
+	height: 55px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 24px;
+	text-align: center;
+	width: 50%;
+}
+
+.login .boton-registro{
+	position: initial;
+	left: 20%;
+	right: 18.13%;
+	bottom: 5vh;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.login #flecha-atras{
+	position: absolute;
+    top: 3vh;
+    left: 5vw;
+    color: #FF5221;
+    font-size: 2rem;
+}
+
+.login #icono-notificacion{
+	position: absolute;
+    top: 3vh;
+    right: 5vw;
+    color: #FF5221;
+    font-size: 28px;
+    font-weight: bolder;
+    line-height: 1;
+    border: 3px solid #ff5221;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    padding: 2px 3px 0 3px;
+    margin-top: 10px;
+}
+
+.cuadro-notificacion{
+	position: absolute;
+	height: 50vh;
+    overflow: auto;
+    background: #fff;
+    left: 0;
+    right: 0;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.cuadro-notificacion p{
+    text-align:justify;
+}
+
+#cuadro-notificacion{
+	position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-transform: lowercase;
+    border-radius: 50%;
+    color: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+}
+
+/* Recuperar Contraseña y Registrarse */
+
+.login.registro{
+	width: 100%;
+    min-height: inherit;
+    margin-top: 25%;
+    margin-bottom: 25%;
+}
+
+.login.registro .custom-file-label::after{
+	content: "Buscar";
+	border-radius: 0 10px 10px 0;
+}
+
+.login.registro .custom-file-label{
+	border-radius: 10px;
+}
+
+.login.registro label{
+	color: #fff;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+}
+
+.login.registro .registrar a{
+	font-size: 15px;
+}
+.login.registro .usuario-editar a{
+	font-size: 15px;
+}
+
+.login.registro .usuario-editar .custom-file .custom-file-label{
+	height: 45px;
+	color:#000;
+	line-height: 30px;
+}
+
+.login.registro .usuario-editar .custom-file .custom-file-label:after{
+	height: 44px;
+	line-height: 2.5;
+}
+
+.login.registro .registrar .custom-file .custom-file-label:after{
+	height: 44px;
+	line-height: 2.5;
+}
+
+.login.registro .registrar .custom-file .custom-file-label{
+	height: 45px;
+	color:#000;
+	line-height: 30px;
+}
+
+.login.registro .registrar .custom-file .custom-file-label:after{
+	height: 44px;
+	line-height: 2.5;
+}
+
+.login .texto-login{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 24px;
+	text-align: center;
+	color: #FFFFFF;
+	max-width: 80%;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.login .subtexto-login{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 16px;
+	text-align: center;
+	color: #FFFFFF;
+	max-width: 80%;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.login .recuperar input, .login .registrar input{
+	border-radius: 15px;
+	height: 45px;
+	font-family: Montserrat, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 16px;
+	text-align: center;
+}
+
+.login .recuperar input::placeholder,.login .registrar input::placeholder{
+	font-family: Montserrat, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 16px;
+	text-align: center;
+}
+
+.login .recuperar input,.login .registrar input{
+	max-width: 80%;
+	width: 100%;
+}
+
+.acceso-facebook, .acceso-google{
+    display: inline;
+    margin-right: auto;
+    padding: 15px;
+    font-size: 20px !important;
+    border-radius: 15px 0 15px 0;
+}
+
+.acceso-facebook{
+	background: #2C52A0;
+}
+
+.acceso-google{
+	background: #DF4A32;
+	margin-left: 15px;
+}
+
+.contenedor-deportes{
+	max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Montserrat, sans-serif;
+	font-size: 13px;
+	line-height: 16px;
+	text-align: center;
+}
+
+.contenedor-deportes span.tagify__input{
+	background:#fff;
+	margin:0;
+	height: 45px;
+	border-radius: 15px;
+	padding: 15px;
+}
+
+.contenedor-deportes .tagify{
+	border:none;
+}
+
+.contenedor-deportes .tagify__input::before{
+	top: 12px;
+    left: 30%;
+}
+
+.contenedor-deportes #text{
+	margin-top: 15px;
+}
+
+/* Header */
+header.header:before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    height: 100px;
+    background: #2C2B31;
+}
+
+header.header{
+	width: 100%;
+	background: #2C2B31;
+	border-bottom: 12px solid #FF5221;
+	transform: skewY(-5deg);
+	height: 15vh;
+	display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header .container{
+	transform: skewY(5deg);
+}
+
+header .logo-gameon{
+	width: 125px;
+}
+
+header #flecha-atras i{
+	color: #FF5221;
+    font-size: 2rem;
+}
+
+header #filtro-principal{
+	display: inline-grid;
+}
+
+header #filtro-principal i{
+	color: #FF5221;
+    font-size: 2rem;
+}
+
+header #filtro-principal.filtro-activo i{
+	color: #fff;
+}
+
+
+header #notificaciones{
+	display: inline-grid;
+    border: 2px solid #e74e2b;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    vertical-align: super;
+}
+
+header #notificaciones i.contador-numero{
+	font-size: 15px;
+    line-height: 25px;
+    color: #e74e2b;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Filtro */
+section.filtro{
+	background: #2C2B31;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 16;
+    transition: all 1s;
+    border-bottom: 12px solid #FF5221;
+    transform: skewY(-6deg);
+}
+
+section.filtro .container{
+	margin-top: 5rem;
+}
+
+section.filtro .container{
+	transform: skewY(6deg);
+}
+
+section.filtro .form-group label{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	color: #FFFFFF;
+}
+
+section.filtro.activo{
+    top: 0;
+ }
+
+section.filtro .formulario-filtro input{
+	border-radius: 10px;
+}
+
+section.filtro select{
+	border-radius: 10px;
+}
+
+.filtro-mostrar-lugar,.filtro-mostrar-fechas{
+	display: none;
+}
+
+.filtro-mostrar-lugar.activo{
+	display: flex;
+}
+
+.filtro-mostrar-fechas.activo{
+	display: flex;
+}
+
+/*
+ *
+ * Notificaciones
+ * 
+ */
+.lista-notificaciones .contenedor-notificaciones{
+	padding: 15px;
+    border: 2px solid #e74e2b;
+    border-radius: 10px;
+}
+
+.lista-notificaciones .titulo-notificacion{
+	font-size: 1.5em;
+    color: #fff;
+}
+
+.lista-notificaciones .tipo-notificacion{
+    font-size: 1.2em;
+    color: #fff; 	
+}
+
+.lista-notificaciones .detalle-notificacion{
+    font-size: 1em;
+    color: #fff; 	
+}
+
+.lista-notificaciones .fecha-notificacion{
+ 	color: #fff;
+}
+
+
+/*
+ *
+ * Principal
+ *
+ */
+
+/* Aviso Principal */
+section.aviso-principal{
+	width: 100%;
+	display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 75vh;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+section.aviso-principal .carousel-item .container{
+	height: 75vh;
+	display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: 40px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.aviso-principal h1{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 44px;
+	color: #fff;
+}
+
+.aviso-principal h2{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 24px;
+	color:#fff;
+}
+
+.carousel-indicators li{
+	width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+/* Iconos */
+section.iconos{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	height: 17vh;
+	margin-bottom: 8vh;
+}
+
+section.iconos i{
+	color: #FF5221;
+    display: block;
+    font-size: 3rem;
+}
+
+section.iconos span{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: inherit;
+	text-align: center;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 10px 0;
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Recomendacion */
+section.recomendacion h4{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 15px;	
+	color: #FFFFFF;
+}
+
+section.recomendacion .campo-cercano{
+	background-image: url(https://dummyimage.com/600x400/000000/ffffff&text=Img+Test);
+	background-position: center;
+    background-size: cover;
+	border-radius: 25px;
+	padding: 18% 1rem 1rem 1rem;
+}
+
+section.recomendacion .campo-cercano h2{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 24px;
+	color: #FFFFFF;
+	margin:0;
+}
+
+section.recomendacion .campo-cercano h3{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	color: #FFFFFF;
+	margin: 0;
+}
+
+/* Favorito */
+section.favorito{
+	margin-bottom: 90px;
+}
+
+section.favorito h4{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 15px;	
+	color: #FFFFFF;
+}
+
+section.favorito .campo-cercano{
+	background-position: center;
+    background-size: cover;
+	border-radius: 25px;
+	padding: 18% 1rem 1rem 1rem;
+}
+
+section.favorito .campo-cercano h2{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 24px;
+	color: #FFFFFF;
+	margin:0;
+}
+
+section.favorito .campo-cercano h3{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	color: #FFFFFF;
+	margin: 0;
+}
+
+/*
+ *
+ * Campo
+ *
+ */
+
+.campo section.lista{
+	margin-top: 20vh;
+}
+
+.campo section.lista #campo-lista{
+	margin-bottom: 8vh;
+}
+
+.campo section.lista #campos.nav-tabs{
+	border:none;
+	justify-content: flex-end;
+}
+
+.campo section.lista #campos.nav-tabs .nav-item a{
+	border: 1px solid #FF5221;
+    background: transparent;
+    border-radius: 10px 0;
+    padding: 3px;
+    color: #ff5221;
+    font-family: Montserrat;
+    text-align: center;
+    width: 100px;
+}
+
+.campo section.lista #campos.nav-tabs .nav-item a:first-child{
+	margin-left: 10px;
+}
+
+.campo section.lista #campos.nav-tabs .nav-item a.active{
+	background: #FF5221;
+	color:#fff;
+}
+
+.campo section.lista .item-campo{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 170px;
+	border-radius: 25px;
+	position: relative;
+	transition: all .5s;
+}
+
+.campo section.lista .item-campo:hover{
+	box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.25);
+}
+
+.campo section.lista .item-campo .fecha-campo span{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 24px;
+	color:#fff;
+	text-shadow: 3px 3px 5px #000;
+	position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.campo section.lista .item-campo .nombre-campo h1{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 24px;
+	color:#fff;
+	text-shadow: 3px 3px 5px #000;
+	position: absolute;
+    top: 75px;
+    left: 20px;
+}
+
+.campo section.lista .item-campo .deporte-campo h3{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color:#fff;
+	text-shadow: 3px 3px 5px #000;
+	position: absolute;
+    top: 105px;
+    left: 20px;
+}
+
+.campo section.lista .item-campo .ubicacion-campo h3{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color:#fff;
+	text-shadow: 3px 3px 5px #000;
+	position: absolute;
+    top: 130px;
+    left: 20px;
+}
+
+.campo section.lista .item-campo .empresa-campo h3{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color:#fff;
+	text-shadow: 3px 3px 5px #000;
+	position: absolute;
+    top: 80px;
+    right: 20px;
+}
+
+.campo section.lista .item-campo .precio-campo h3{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 20px;
+	color:#fff;
+	text-shadow: 3px 3px 5px #000;
+	position: absolute;
+    top: 130px;
+    right: 20px;
+}
+
+.campo section.lista #campo-mapa .container{
+	padding: 0;
+}
+
+.campo section.lista #campo-mapa .contenedor-mapa{
+	background-image: url(../img/mapa.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+    height: 70vh;
+}
+
+/*
+ *
+ * Grupos
+ *
+ */
+@media screen and (max-height: 568px){
+	.grupo.vista-principal section.prefiltros .filtro-deportes li{
+		padding: 0 5px;
+	}
+
+	.grupo.vista-principal section.prefiltros .filtro-dias li{
+		padding-left: 5px;
+		padding-right: 5px;
+		font-size: 0.5rem;
+	}
+
+	.grupo section.prefiltros .filtro-dias #semana-atras,.grupo section.prefiltros .filtro-dias #semana-adelante{
+		font-size: 0.7rem !important;
+	}
+}
+
+@media screen and (max-height: 736px){
+	.grupo.vista-principal section.prefiltros{
+		margin-top: 25vh;
+	}
+
+	.grupo.vista-principal section.agregar-grupos{
+		margin-top: 0;
+	}
+}
+
+section.titulo{
+	margin-top: 22vh;
+    margin-bottom: 1rem;
+}
+
+section.titulo h2{
+	color: #fff;
+	font-size: 24px;
+	line-height: 29px;
+	text-align: left;
+}
+
+.grupo section.agregar-grupos{
+
+}
+
+.grupo section.agregar-grupos a{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 20px;
+	color: #fff;
+}
+
+.grupo section.agregar-grupos span{
+    color: #FF5221;
+    font-size: 40px;
+    line-height: 20px;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+.grupo section.prefiltros{
+	margin-top: 20vh;
+}
+
+.grupo section.prefiltros .filtro-deportes ul{
+	padding-left: 0;
+	text-align: center;
+}
+
+.grupo section.prefiltros .filtro-deportes li{
+	list-style: none;
+	display: inline-block;
+	border:2px solid #FF5221;
+	border-radius: 10px 0;
+	color: #FF5221;
+	padding: 0 10px;
+}
+
+.grupo section.prefiltros .filtro-deportes li.activo{
+	color: #fff;
+	background-color: #FF5221;
+}
+
+.grupo section.prefiltros .filtro-dias{
+}
+
+.grupo section.prefiltros .filtro-dias ul{
+	display: inline-block;
+	padding-left: 0;
+    text-align: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 15px 15px;
+    margin: auto;
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+.grupo section.prefiltros .filtro-dias #semana-atras, .grupo section.prefiltros .filtro-dias #semana-adelante{
+	display: inline;
+	color: #FF5221;
+    font-size: 1.2rem;
+    vertical-align: sub;
+}
+
+.grupo section.prefiltros .filtro-dias #semana-adelante .gameon-flecha-izq::before{
+    transform: rotate(180deg);
+}
+
+.grupo section.prefiltros .filtro-dias li{
+	list-style: none;
+    display: inline-grid;
+    color: #FF5221;
+    padding: 5px;
+    font-size: 0.8rem;
+}
+
+.grupo section.prefiltros .filtro-dias li.activo{
+	color: #fff;
+}
+
+.grupo section.prefiltros .filtro-dias li span{
+	display: block;
+	text-transform: uppercase;
+}
+
+.grupo section.lista-grupos{
+	margin-bottom: 10vh;
+}
+
+.grupo section.lista-grupos .item-grupo{
+	background-image: url(../img/no-reservado-34.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 170px;
+	border-radius: 35px;
+	position: relative;
+	transition: all 0.5s;
+}
+
+.grupo section.lista-grupos .item-grupo:hover{
+	box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.25);
+}
+
+.grupo section.lista-grupos .item-grupo .nombre-grupo h1{
+	font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+	font-size: 20px;
+	line-height: 24px;
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+}
+
+.grupo section.lista-grupos .item-grupo .deporte-grupo h2{
+	font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;
+    position: absolute;
+    top: 95px;
+    left: 20px;
+}
+
+.grupo section.lista-grupos .item-grupo .fecha-grupo h2{
+	font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;
+    position: absolute;
+    top: 110px;
+    left: 20px;
+}
+
+.grupo section.lista-grupos .item-grupo .organizador h3{
+	font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;
+    position: absolute;
+    top: 130px;
+    left: 20px;
+}
+
+.grupo section.lista-grupos .item-grupo .reservado{
+    position: absolute;
+    top: 130px;
+    right: 20px;
+}
+
+.grupo section.lista-grupos .item-grupo .reservado h3{
+	font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;
+    display: inline-block;
+}
+
+.grupo section.lista-grupos .item-grupo .reservado .estado-reservado{
+	background-color: #C42D1A;
+	display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.grupo section.lista-grupos .item-grupo .reservado .estado-reservado.activo{
+	background-color: #66b12f;
+}
+
+.grupo section.crear-grupo{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.grupo section.crear-grupo .contenedor-deportes{
+	max-width: 100%;
+	width: 100%;
+}
+
+.grupo section.crear-grupo .contenedor-deportes span.tagify__input{
+	height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+	border-radius: 10px;
+}
+
+.grupo section.crear-grupo .contenedor-deportes span.tagify__input::before{
+	height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+	border-radius: 10px;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.grupo section.imagen-grupo{
+	margin-top: 10vh;
+	height: 40vh;
+	display: flex;
+	align-items: flex-end;
+	color: #fff;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.grupo section.imagen-grupo h2{
+	font-size: 24px;
+	line-height: 29px;
+}
+
+.grupo section.imagen-grupo h3{
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.grupo section.informacion-grupo{
+	height: 42vh;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.grupo section.informacion-grupo h2{
+	font-size: 24px;
+	line-height: 29px;
+}
+
+.grupo section.informacion-grupo h3{
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.grupo section.informacion-grupo .boton-gameon{
+	font-size: 20px;
+	line-height: 24px;
+	height: auto;
+    width: 140px;
+}
+
+.grupo section.chat-grupo{
+	margin-top: 20vh;
+	margin-bottom: 15vh;
+}
+
+.grupo section.chat-grupo h2{
+	color: #fff;
+	font-size: 24px;
+	line-height: 29px;
+}
+
+.grupo section.miembros-grupo{
+	margin-top: 20vh;
+	margin-bottom: 2rem;
+}
+
+.grupo section.miembros-grupo .boton-gameon{
+	font-size: 14px;
+	line-height: 17px;
+	height: auto;
+    width: 100px;
+}
+
+.grupo section.miembros-grupo .col-6:nth-child(1){
+	text-align: right;
+	text-align: -webkit-right;
+}
+
+.grupo section.miembros-grupo h2{
+	color: #fff;
+	font-size: 24px;
+	line-height: 29px;
+}
+
+.grupo section.miembros-grupo h3{
+	color: #fff;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.grupo section.miembros-grupo i{
+	color: #ff5221;
+	font-size: 2rem;
+}
+
+.grupo section.lista-miembros-grupos{
+	margin-bottom: 8vh;
+}
+
+.grupo .tarjeta-imagen-usuario{
+	box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 50%;
+	border: solid 2px #ff5221;
+	width: 100%;
+	background-image: url('../img/cuenta-08.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+}
+
+.grupo .tarjeta-nombre-usuario{
+	color: #fff;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.grupo .tarjeta-mensaje,.grupo .tarjeta-deporte{
+	color: #fff;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.grupo .tarjeta-mensaje,.grupo .tarjeta-username{
+	color: #fff;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.grupo .tarjeta-usuario span.iconos{
+	font-size: 1.3rem;
+	color: #FF5221;
+}
+
+.grupo .tarjeta-usuario span.iconos.activo{
+	color: #fff;
+}
+
+.mensaje-propio .col-3{
+	order: 2;
+    text-align: center!important;
+}
+
+.mensaje-propio .col-9{
+	order: 1;
+    text-align: right!important;
+}
+
+.grupo section.escribir-mensaje{
+	position: fixed;
+    width: 100%;
+    height: 8vh;
+    bottom: 7.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2c2b31;
+}
+
+.grupo section.escribir-mensaje i{
+	color: #ff5221;
+	font-size: 2rem;
+}
+
+/* Usuario */
+.usuario{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+
+.usuario section.detalles-usuario{
+	width: 100%;
+	margin-top: 23vh;
+    margin-bottom: 10vh;
+}
+
+.usuario section.detalles-usuario .foto-usuario{
+	margin-left: auto;
+    margin-right: auto;
+    width: 153px;
+    height: 152px;
+    border-radius: 50%;
+    background-image: url(../img/cuenta-08.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.usuario section.detalles-usuario .nombre-usuario{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 29px;
+	text-align: center;
+	color:#fff;
+}
+
+.usuario section.detalles-usuario .nickname-usuario{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	color:#fff;
+	display: block;
+}
+
+.usuario section.detalles-usuario .deporte-usuario{
+	display: inline-block;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	color:#fff;
+}
+
+.usuario section.detalles-usuario .nacimiento-usuario, .usuario section.detalles-usuario .correo-usuario, .usuario section.detalles-usuario .telefono-usuario{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: center;
+	color:#fff;
+}
+
+.usuario section.detalles-usuario .boton-gameon{
+    width: 150px;
+    height: auto;
+    font-size: 15px;
+    line-height: 45px;
+}
+
+.usuario section.detalles-usuario .botones-adicionales .col-4{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.usuario section.detalles-usuario .botones-adicionales a{
+	color: #fff;
+}
+
+/*
+ *
+ *Campo Item
+ *
+ **/
+
+.campo-item{
+ 	height: 100vh;
+}
+
+section.fotos-campo .carousel-item .container{
+	margin-top: 10vh;
+    height: 35vh;
+	display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.campo-item p.texto-adicional-campo{
+	color:#fff;
+	font-size: 13px;
+}
+
+.campo-item section.detalles-campo .item-campo{
+	width: 100%;
+	height: 80px;
+	position: relative;
+}
+
+.campo-item section.detalles-campo .item-campo .nombre-campo h1{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 24px;
+	color:#fff;
+	text-shadow: 3px 3px 5px #000;
+	position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.campo-item section.detalles-campo .item-campo .deporte-campo h3{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color:#fff;
+	text-shadow: 3px 3px 5px #000;
+	position: absolute;
+    top: 25px;
+    left: 0;
+}
+
+.campo-item section.detalles-campo .item-campo .ubicacion-campo h3{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color:#fff;
+	text-shadow: 3px 3px 5px #000;
+	position: absolute;
+    top: 49px;
+    left: 0;
+}
+
+.campo-item section.detalles-campo .item-campo .empresa-campo h3{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color:#fff;
+	text-shadow: 3px 3px 5px #000;
+	position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.campo-item section.detalles-campo .item-campo .precio-campo h3{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 20px;
+	color:#fff;
+	position: absolute;
+    background: #e74e2b;
+    padding: 10px 15px;
+    border-radius: 15px 0;
+    top: 30px;
+    right: 0;
+}
+
+.campo-item section.detalles-campo{
+	margin-top: -90px;
+	margin-bottom: 30px;
+}
+
+.campo-item section.formulario-reserva-campo{
+	margin-bottom: 10vh;
+}
+
+.campo-item section.formulario-reserva-campo .detalles-campo-botones{
+	display: grid;
+    margin-bottom: 15px;
+}
+
+.campo-item section.formulario-reserva-campo .boton-detalles-campo{
+	display: inline-block;
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    color: #fff;
+    background: #e74e2b;
+    padding: 12px 15px 10px 15px;
+    border-radius: 15px 0;
+}
+
+.campo-item section.formulario-reserva-campo .boton-detalles-ubicacion{
+	display: inline-block;
+    margin-left: 2%;
+    width: 48%;
+    float: right;
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    color: #fff;
+    background: #e74e2b;
+    padding: 12px 15px 10px 15px;
+    border-radius: 15px 0;
+}
+
+.campo-item section.formulario-reserva-campo .texto-adicional-campo{
+	margin-top: 15px;
+	display: none;
+}
+
+.campo-item section.formulario-reserva-campo label{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	color:#fff;
+}
+
+.campo-item section.formulario-reserva-campo select{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	border-radius: 10px;
+    height: 45px;
+}
+
+.campo-item section.formulario-reserva-campo select option[disabled]{
+	display: none;
+}
+
+.campo-confirmacion .boton-gameon, .campo-confirmacion button[type=submit].boton-gameon{
+	width: 150px
+}
+
+/* Campo Confirmación */
+.campo-confirmacion{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 77vh;
+    margin-top: 15vh;
+    margin-bottom: 8vh;
+}
+
+.campo-confirmacion .detalles-reserva .check{
+	margin-left: auto;
+    margin-right: auto;
+    width: 153px;
+    height: 152px;
+    border-radius: 50%;
+    background-image: url(../img/cuenta-08.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.campo-confirmacion .detalles-reserva{
+	color: #fff;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.campo-confirmacion .detalles-reserva .titulo-reserva{
+	font-size: 24px;
+	line-height: 29px;
+    margin-bottom: 0;
+}
+
+.campo-confirmacion .detalles-reserva .nombre-campo{
+	font-size: 18px;
+	line-height: 22px;
+	text-align: left;
+	margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.campo-confirmacion .detalles-reserva .fecha-reserva, .campo-confirmacion .detalles-reserva .horario-reserva{
+	font-size: 18px;
+	line-height: 22px;
+	text-align: left;
+    margin-bottom: 1rem;
+}
+
+.campo-confirmacion .detalles-reserva .direccion-reserva{
+	font-size: 18px;
+	line-height: 22px;
+	text-align: left;
+    margin-bottom: 3rem;
+}
+
+
+
+/* Footer */
+footer.footer{
+	box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.25);
+	width: 100%;
+	background: #2C2B31;
+	position: fixed;
+    bottom: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    z-index: 20;
+}
+
+footer.footer i{
+	color: #FF5221;
+    font-size: 1.7rem;
+}
+
+footer.footer .activo i{
+	color: #fff;
+}
+
+footer.footer .col{
+	border-right: 1px solid #FF5221;
+}
+
+footer.footer .col:last-child{
+	border-right: none;
+}
+
+/* Animaciones */
+.gameon-resaltar{
+	animation: resaltar .5s;
+}
+
+.gameon-pulso{
+	animation: pulso 1s infinite;	
+}
+
+/* Keyframes */
+@keyframes resaltar{
+	0%{
+		transform: scale(1);
+	}
+
+	50%{
+		transform: scale(1.05);
+	}
+
+	100%{
+		transform: scale(1);
+	}	
+}
+
+@keyframes pulso{
+	0%{
+		box-shadow: 0 0 1px #e74e2b;
+	}
+
+	50%{
+		box-shadow: 0 0 10px #e74e2b;
+	}
+
+	100%{
+		box-shadow: 0 0 1px #e74e2b;
+	}	
+}
+
+/*
+ * Responsive
+ */
+@media screen and (max-width: 368px) {
+	header #filtro-atras i {
+	    font-size: 1.5rem;
+	}
+
+	header .col:nth-child(1){
+		padding-right: 0;
+	}
+
+	header .col:nth-child(2){
+		padding: 0;
+	}
+
+	header .col:nth-child(3){
+
+	}
+	.grupo .crear-grupo h1.h1-gameon{
+	    margin-bottom: 15px !important;
+	}
+	
+	.grupo .crear-grupo button[type=submit].boton-gameon, .boton-gameon{
+	    margin-top: 5px !important;
+	}
+}
+
+@media screen and (max-height: 736px) {
+	header.header{
+		height: 19vh;
+	}
+
+	section.iconos i{
+	    font-size: 2.7rem;
+	}
+
+	.campo section.lista {
+	    margin-top: 25vh;
+	}
+
+	.campo section.lista #campo-mapa .contenedor-mapa{
+		height: 60vh;
+	}
+
+	.grupo section.agregar-grupos {
+	    margin-top: 25vh;
+	}
+
+	.usuario{
+		height: 70vh;
+	    margin-top: 25vh;
+	    margin-bottom: 5vh;
+	}
+
+	.usuario section.detalles-usuario .foto-usuario{
+		margin-bottom: 20px !important;
+	}
+
+	.usuario section.detalles-usuario .telefono-usuario{
+		margin-bottom: 20px !important;
+	}
+
+	.campo-item section.detalles-campo {
+	    margin-bottom: 25px;
+	}
+
+	.campo-item section.formulario-reserva-campo .boton-gameon{
+		margin-top: 0rem!important;
+	}
+
+	.campo-confirmacion .detalles-reserva .direccion-reserva{
+		margin-bottom: 1rem;
+	}
+	
+	.grupo .crear-grupo h1.h1-gameon{
+	    margin-bottom: 1em !important;
+	}
+	
+	.grupo .crear-grupo button[type=submit].boton-gameon{
+	    margin-top: 1em !important;
+	}
+}
+
+@media screen and (max-height: 568px) {
+	.usuario section.detalles-usuario{
+		margin-top: 45vh;
+	}
+	.grupo .crear-grupo h1.h1-gameon{
+		margin-bottom: 0.2em !important;
+	}
+
+	.grupo .crear-grupo button[type=submit].boton-gameon{
+		margin-top: 0.2em !important;	
+	}
+
+	.usuario section.detalles-usuario .foto-usuario{
+		margin-bottom: 0 !important;
+	}
+
+	.usuario section.detalles-usuario .telefono-usuario{
+		margin-bottom: 0 !important;
+	}
+
+	.campo-item section.detalles-campo {
+	    margin-bottom: 25px;
+	}
+
+	.campo-item section.formulario-reserva-campo .boton-gameon{
+		margin-top: 0rem!important;
+	}
+
+	.campo-confirmacion .detalles-reserva .check{
+		margin-bottom: 0.5rem!important;
+		width: 125px;
+    	height: 124px;
+	}
+
+	.campo-confirmacion .detalles-reserva .nombre-campo{
+		font-size: 18px;
+		line-height: 22px;
+		text-align: left;
+		margin-top: 1rem;
+	    margin-bottom: .5rem;
+	}
+
+	.campo-confirmacion .detalles-reserva .fecha-reserva, .campo-confirmacion .detalles-reserva .horario-reserva{
+		font-size: 18px;
+		line-height: 22px;
+		text-align: left;
+	    margin-bottom: .5rem;
+	}
+
+	.campo-confirmacion .detalles-reserva .direccion-reserva{
+		font-size: 18px;
+		line-height: 22px;
+		text-align: left;
+	    margin-bottom: 1rem;
+	}
+
+	.campo-confirmacion .boton-gameon, .campo-confirmacion button[type=submit].boton-gameon{
+		width: 135px;
+		margin-bottom: 25px;
+	}
+
+	.campo-confirmacion .boton-gameon {
+		    margin-top: 15px !important;
+	}
+}
+
+@media screen and (max-height: 450px) {
+    header.header{
+        height: 30vh;
+    }
+    section.filtro.activo{
+        overflow: auto;
+        height: 700px;
+    }
+    section.filtro .container{
+        margin-top: 400px;
+        margin-bottom: 100px;
+        height: 700px;
+        overflow: auto;
+    }
+    footer.footer{
+        display:none;
+    }
+    
+    .grupo section.escribir-mensaje{
+        height: auto;
+        bottom: 0;
+    }
+    
+    .grupo section.chat-grupo{
+        margin-top: 100px;
+    }
+    
+    .grupo section.crear-grupo{
+        height: auto;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+}
