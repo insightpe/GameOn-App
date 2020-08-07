@@ -42,10 +42,17 @@
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
-        <icon height="57" src="res/icon/ios/icon.png" width="57" />
-        <icon height="72" src="res/icon/ios/icon-72.png" width="72" />
-        <icon height="114" src="res/icon/ios/icon-57@2x.png" width="114" />
-        <icon height="144" src="res/icon/ios/icon-72@2x.png" width="144" />
+        <icon height="29" src="res/icon/ios/29.png" width="29" />
+        <icon height="40" src="res/icon/ios/40.png" width="40" />
+        <icon height="57" src="res/icon/ios/57.png" width="57" />
+        <icon height="58" src="res/icon/ios/58.png" width="58" />
+        <icon height="60" src="res/icon/ios/60.png" width="60" />
+        <icon height="80" src="res/icon/ios/80.png" width="80" />
+        <icon height="87" src="res/icon/ios/87.png" width="87" />
+        <icon height="114" src="res/icon/ios/114.png" width="114" />
+        <icon height="120" src="res/icon/ios/120.png" width="120" />
+        <icon height="180" src="res/icon/ios/180.png" width="180" />
+        <icon height="1024" src="res/icon/ios/1024.png" width="1024" />
 
         <splash height="1024" src="res/screen/ios/Default-Portrait~ipad.png" width="768" />
         <splash height="2048" src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" />
