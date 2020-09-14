@@ -58,10 +58,19 @@ var UiLogin = {
           data: data,
           success: function(data) {
               console.log(data);
+              console.log("account already exists.");
             if(!$.isEmptyObject(data.error)){
               Toast.fire({
                 icon: 'error',
                 title: data.error
+              });
+console.log(data.error);
+              console.log("logout because of account already exists.");
+              facebookConnectPlugin.logout(function(response){
+                window.localStorage.clear();
+                window.location = "login.html";
+              }, function(response){
+
               });
             }else{
               window.localStorage.setItem("deporte_id_default", data.deporte_id_default);
@@ -73,7 +82,7 @@ var UiLogin = {
               window.localStorage.setItem("user_img", data.user_img);
               window.localStorage.setItem("es_google_login", data.es_google_login);
               window.localStorage.setItem("es_facebook_login", data.es_facebook_login);
-    
+
               window.localStorage.setItem("token", data.token);
               window.location = "principal.html";
             }
@@ -83,17 +92,29 @@ var UiLogin = {
       function(response){
         facebookConnectPlugin.login(["public_profile"], UiLogin.fbLoginSuccess,
           function loginError (error) {
-            if(error.errorMessage.includes("[code] 1340031")){
-              try{
-                Toast.fire({
-                  icon: 'error',
-                  title: error.errorMessage.substr(error.errorMessage.lastIndexOf("[message]:")+11)
-                });
-              }catch(ex){
-                console.error(ex)
+            try{
+              if(error.errorMessage.includes("[code] 1340031")){
+                try{
+                  Toast.fire({
+                    icon: 'error',
+                    title: error.errorMessage.substr(error.errorMessage.lastIndexOf("[message]:")+11)
+                  });
+                }catch(ex){
+                  console.error(ex);
+                }
+              }else{
+                console.error(error);
               }
-            }else{
-              console.error(error)
+            }catch(ex){
+              console.error(ex);
+              console.error(error);
+
+              facebookConnectPlugin.logout(function(response){
+                window.localStorage.clear();
+                window.location = "login.html";
+              }, function(response){
+
+              });
             }
           }
         );
@@ -107,7 +128,7 @@ var UiLogin = {
       }
     );*/
   },
-  
+
   fbLoginSuccess: function(userData){
     UiLogin.facebookLogin(null);
   },
@@ -151,7 +172,7 @@ var UiLogin = {
               window.localStorage.setItem("user_img", data.user_img);
               window.localStorage.setItem("es_google_login", data.es_google_login);
               window.localStorage.setItem("es_facebook_login", data.es_facebook_login);
-   
+
               window.localStorage.setItem("token", data.token);
               window.location = "principal.html";
             }
@@ -213,7 +234,7 @@ var UiLogin = {
               window.localStorage.setItem("user_img", data.user_img);
               window.localStorage.setItem("es_google_login", data.es_google_login);
               window.localStorage.setItem("es_facebook_login", data.es_facebook_login);
-   
+
               window.localStorage.setItem("token", data.token);
               window.location = "principal.html";
             }
@@ -255,7 +276,7 @@ var UiLogin = {
               title: data.error
             });
           }else{
-            
+
             window.localStorage.setItem("deporte_id_default", data.deporte_id_default);
             window.localStorage.setItem("user_id", data.user_id);
             window.localStorage.setItem("user_name", data.user_name);
@@ -265,7 +286,7 @@ var UiLogin = {
             window.localStorage.setItem("user_img", data.user_img);
             window.localStorage.setItem("es_google_login", data.es_google_login);
             window.localStorage.setItem("es_facebook_login", data.es_facebook_login);
- 
+
             window.localStorage.setItem("token", data.token);
             window.location = "principal.html";
           }
